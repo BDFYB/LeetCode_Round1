@@ -20,6 +20,7 @@ string Solution::longest_common_perfix(vector<string> &strs) {
         temp_char = temp_string.c_str()[0];
         if (temp_char == '\0' or temp_char != start_char) {
             is_ok = false;
+            break;
         }
         temp_string.erase(temp_string.begin());
         current_strs.push_back(temp_string);
@@ -46,7 +47,7 @@ int main(int argc, char *argv[]) {
     }
     */
     Solution resolve = Solution();
-    string output = resolve.longest_common_perfix(strms2);
+    string output = resolve.longest_common_perfix(strms);
     std::cout << "result: " << output << std::endl;
 
     return 0;
